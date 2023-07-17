@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="mainlogo" type="image/x-mainlogo" href="{% static 'img/mainlogo.png' %}">
+    <link href="{% static 'style1.css' %}" rel="stylesheet">
+</head>
+<body id="registermenu">
+    <div class="form-box">
+      <form class="form" action="{% url 'loginpage2' %}" method="post">
+        <img src="{% static 'image/mainlogo.png' %}" id="logo" alt="ForkAndBook Logo">
+          <span class="title">Log in</span>
+          <span class="subtitle">Please log in to manage the order</span>
+          <div class="form-container">
+            {% csrf_token %}
+            <input name="EmployeeID" type="text" class="input" placeholder="Employee ID">
+            <input name="EmployeePass" type="password" class="input" placeholder="Password">
+          </div>
+          <input class="loginBut" type="submit" value="LOG IN">
+      </form>
+      {% for message in message %}
+      {% if message.tags == 'success' %}
+      <div class="success-message2">{{ message }}</div>
+      {% endif %}
+      {% endfor %}
+      <br><br>
+      <div class="form-section">
+        <p>Don't have an account yet? Click this button <a href="{% url 'registerpage2' %}">Register</a> </p>
+      </div>
+    </div>
+</body>
+</html>

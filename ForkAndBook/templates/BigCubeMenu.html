@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Cube Menu</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body>
+    <div id="Menu">
+        <h1>Menu</h1>
+        <hr style="width: 100%">
+        <br><br>
+        {% for item in menu %}
+        <div class="menu-item">
+            <div class="order-count">{{ forloop.counter }}</div>
+            <div class="item-details">
+                <h3>{{ item.MenuName }}</h3>
+                <p>The Price is RM: {{ item.MenuPrice }}.00</p>
+                <p>Assigned to: {{ item.EmployeeID.EmployeeName }}</p>
+                <form method="post" action="{% url 'addFood' item.MenuID %}">
+                    {% csrf_token %}
+                    <input type="submit" value="Add to FoodBook">
+                </form>
+                    <form method="post" action="{% url 'deleteMenu' item.MenuID %}">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete from Menu">
+                    </form>
+                    <br><br>
+                    <hr style="width : 100%">
+            </div>
+        </div>
+        <br><br>
+    {% endfor %}    
+    </div>
+</body>
+</html>

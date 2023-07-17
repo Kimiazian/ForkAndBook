@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice page</title>
+    {% load static %}
+    <link rel="mainlogo" type="image/x-mainlogo" href="{% static 'img/mainlogo.png' %}">
+    <link href="{% static 'style1.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="logo2">
+        <img src="{% static 'image/mainlogo.png' %}" id="logo3"alt="ForkAndBook Logo">
+    </div>
+    <div class="boxes">
+        <div id="box5">
+            <img src="{% static 'image/cafe.png' %}" id="logo4" alt="Cafe pict">
+            <div class="but">
+                <a class="delete" href="{% url 'BigCubeMenu' %}">Big Cube Cafe</a>
+            </div>
+        </div>
+        <div id="box4">
+            <img src="{% static 'image/stall.png' %}" id="logo4" alt="Stall pict">
+            <div class="but">
+                <a class="update" href="{% url 'KhemahBiruMenu' %}">Khemah Biru Stall</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

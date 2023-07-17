@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  {% load static %}
+  <link rel="mainlogo" type="image/x-mainlogo" href="{% static 'image/mainlogo.png' %}">
+  <link href="{% static 'style1.css' %}" rel="stylesheet">
+</head>
+<body id="registermenu">
+  <div class="form-box">
+    <form class="form" action="{% url 'registerpage2' %}" method="POST">
+      <img src="{% static 'image/mainlogo.png' %}" id="logo" alt="ForkAndBook Logo">
+        <span class="title">Register</span>
+        <span class="subtitle">Register an account to manage the order</span>
+        <div class="form-section">
+            <span class="subtitle">Are you a student? Click here to register <a href="{%url 'registerpage' %}">Student</a></span>
+        </div>
+        <div class="form-container">
+          {% csrf_token %}
+          <input name="EmployeeID" type="text" class="input" placeholder="Employee ID">
+          <input name="EmployeeName" type="text" class="input" placeholder="Employee Name">
+          <input name="EmployeePhone" type="text" class="input" placeholder="Employee Number">
+          <input name="EmployeePass" type="password" class="input" placeholder="Password">
+        </div>
+        <input class="loginBut" type="submit" value="SUBMIT">
+    </form>
+    <p>{{ message }}</p>
+    <div class="form-section">
+      <p>Have an account? <a href="{% url 'loginpage2' %}">Log in</a> </p>
+    </div>
+    </div>
+</body>
+</html>

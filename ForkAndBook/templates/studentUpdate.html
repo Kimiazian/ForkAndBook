@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Page</title>
+    {% load static %}
+    <link rel="mainlogo" type="image/x-mainlogo" href="{% static 'image/mainlogo.png' %}">
+    <link href="{% static 'style1.css' %}" rel="stylesheet">     
+</head>
+<body >
+    <div id="logo2">
+        <img src="{% static 'image/mainlogo.png' %}" id="logo3"alt="ForkAndBook Logo">
+    </div>
+    <div id="updatepage1">
+        <h1>Update your account</h1>
+        <form action="" class="form" method="post">
+            {% csrf_token %}
+            <label for="StudID">Student ID : </label>
+            <input type="text" name="StudID" value="{{ student.StudID }}" disabled required>
+            <br>
+            <label for="StudName">Student Name : </label>
+            <input type="text" name="StudName" value="{{ student.StudName }}" required>
+            <br>
+            <label for="StudPhone">Phone Number : </label>
+            <input type="text" name="StudPhone" value="{{ student.StudPhone }}" required>
+            <br>
+            <input class="update" type="submit" value="Update">
+        </form>
+        <br><br>
+        <a class="middlemenu" href="{% url 'homeStudent' %}">Back</a>
+    </div>
+</body>
+</html>

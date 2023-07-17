@@ -1,0 +1,418 @@
+
+:root{
+    --color1 : rgb(72, 156, 235);
+    --color2 : #000000;
+    --color3 : #fff;
+}
+
+body {
+    background: var(--color1);
+    font-family: 'Helvetica';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body#registermenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.form-box {
+  height: auto;
+  max-width: 400px;
+  background: #f1f7fe;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+
+.but{
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  margin-top: 40px;
+}
+
+.but:hover {
+  background-color: #005ce6;
+}
+
+/*logo*/
+
+#logo2{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#logo3{
+  width: 10%;
+  height: 10%;
+}
+
+#logo4{
+  width: 50%;
+  height: 70%;
+}
+
+
+
+.loginBut{
+  margin-top: 10px;
+  color: aliceblue;
+}
+
+.card-header{
+  height: auto;
+}
+
+.student-profile .card {
+  border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.boxes {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#box{
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 16px;
+}
+
+#updatepage1 {
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  align-items: center;
+  margin-left: 750px;
+  border-radius: 16px;
+}
+
+#box2{
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+#box2 .menu{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#box2 .menu a{
+  width: fit-content;
+}
+
+.belowmenu{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+.student-foodbooks{
+  height: auto;
+  flex-grow: 1;
+  border-left: 1px solid black;
+  padding: 0 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.student-foodbooks h3{
+  width: 100%;
+}
+#box5{
+  border: 1px solid black;
+  width: 50%;
+  height: 400px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 16px;
+}
+
+#box4{
+  border: 1px solid black;
+  width: 50%;
+  height: 400px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 16px;
+}
+
+#Menu{
+  border: 1px solid black;
+  width: 82%;
+  height: 890px;
+  padding: 20px;
+  background-color: #f1f7fe;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 16px;
+}
+
+.middlemenu {
+  background-color: rgb(78, 194, 78);
+  color: #fff;
+  border: 0;
+  width: fit-content;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-decoration: none;
+}
+
+.middlemenu:hover {
+  background-color: rgb(31, 126, 31);
+}
+
+.delete{
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-decoration: none;
+}
+
+.delete:hover {
+  background-color: #005ce6;
+}
+
+.update{
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-decoration: none;
+}
+
+.update:hover {
+  background-color: #005ce6;
+}
+
+.loginBut{
+  background-color: #005ce6;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-decoration: none;
+}
+
+.logoutBut{
+  background-color: red;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  text-decoration: none;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  height: 430px;
+  position: absolute;
+  left: 50%;
+  margin-top: 303px;
+  margin-left: -50px;
+  top: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.order-count {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+}
+
+.item-details p {
+  margin: 5px 0;
+}
+
